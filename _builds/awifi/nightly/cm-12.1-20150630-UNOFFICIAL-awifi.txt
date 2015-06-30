@@ -1,0 +1,393 @@
+===================================
+Since Sat Jun 27 09:22:38 UTC 2015
+===================================
+
+
+   * bootable/recovery/
+8110781 improve Rainbow Mode
+a0d5ef2 RAINBOW MODE MOTHERFUCKERS
+
+   * build/
+435b17f Revert "build: use common factory script and input more parameters"
+c1f68ae definitions.mk: look for definitions.mk in device/*/build also
+
+   * device/lge/awifi/
+7aa3fa7 audio_policy: Fixes in input devices
+f60f022 No need to enable adbd in charging only mode
+9ceeee1 overlay: Enable automatic brightness by default
+56b1044 sepolicy: Address camera denial
+
+   * frameworks/av/
+5dd0f80 libstagefright: back off exynos4_enhancements HWC_HWOVERLAY usage
+143ed19 Revert "libstagefright: free mMoovBoxBuffer"
+4c6d30b audiopolicy: Add msm8994
+
+   * frameworks/base/
+8889f49 Add default for Settings.System.DOUBLE_TAP_SLEEP_GESTURE.
+4f965c5 SystemUI: recalculate clock position on removing empty shade views
+b1e3b8c Enable fingerprint option in Settings [1/3]
+a6e670d Fingerprint [1/2]: Numerous Fingerprint Improvements
+a5c551d density: do not apply to virtual displays
+673fc49 SystemUI: hide navigation bar faster in SetupWizard
+dc4e37b Don't inflate new phone states on callbacks.
+aa8ad23 Clear callback handler queue when unregistering a phone state listener.
+28258a1 Stop checking for resources.arsc in shouldCreateIdmap
+c1fad89 frameworks: Factor out Profiles API to CMSDK
+8d9044c SystemUI: fix recents task view height calculation
+548ee80 SystemUI: don't launch visualizer before we are attached
+49d68f9 return default density only for primary display
+8a649c1 alarmmanager: Add sanity checking for elapsed_realtime alarms
+829a047 Rotation related corrections
+
+   * frameworks/native/
+916232e Enable fingerprint option in Settings [2/3]
+
+   * frameworks/opt/telephony/
+af066e1 msim: fix parse error when roaming with slot 2 only
+
+   * hardware/qcom/audio-caf/msm8994/
+0fe80ca audio: Extend platform parser to allow device name aliasing
+2eabacc msm8994: Remove bogus metadata
+
+   * packages/apps/DeskClock/
+5419fe6 DeskClock: Refactor to point at Profiles in CMSDK.
+
+   * packages/apps/Email/
+84e293f Allow saving attachments even if there's no intent handling them.
+3afa9da Allow download of compressed attachments.
+
+   * packages/apps/InCallUI/
+062ec69 Revert "[2/2] InCallUI: let InCallUI handle proximity sensor for incoming calls"
+
+   * packages/apps/Settings/
+45d1789 Show dialog if max number of fingerprints has been reached
+c82cafa Rename/Delete UI in fingerprint list
+aa16f13 Enable fingerprint option in Settings [3/3]
+a80d3c4 Settings: add wifi ap dialog 'show password' default overlay
+9e37bb6 settings: Fix developer options crash when mBackupManager is null
+f6131d1 Settings: Refactor to point at Profiles in CMSDK.
+
+   * packages/apps/SetupWizard/
+ee89d29 Clarify touch event consumption logic
+
+   * packages/apps/Trebuchet/
+31559ae Hide workspace shortcuts during binding when AllApps is shown.
+
+   * system/extras/
+5524958 make_ext4fs: workaround for a glibc scandir bug
+60a6420 fix keystore_signer
+
+   * vendor/cm/
+4c4e428 vendor/cm: overlay start for ProfileService in external framework.
+
+===================================
+Since Wed Jun 24 13:19:51 UTC 2015
+===================================
+
+
+   * bootable/recovery/
+8bf5e55 recovery: bu: Support verity, incremental OTAs, and encrypted data
+
+   * build/
+f9202f2 build: use common factory script and input more parameters
+
+   * device/lge/awifi/
+6e12881 sepolicy: Address wcnss_service denial
+c82e038 sepolicy: Fix sensors again
+ca4fc36 Use custom charger images
+898b0dc Fix services that use misc partition
+
+   * device/qcom/sepolicy/
+6a2a0b7 sepolicy: Allow time_daemon to use POSIX clocks
+
+   * external/android-visualizer/
+38d5cf3 VisualizerView: add ability to disable drawing
+fc9b944 Revert "visualizer: don't draw fade out paint when there's no content"
+3a5b85a visualizer: don't draw fade out paint when there's no content
+
+   * external/libtar/
+6f1e8f6 libtar: Support transparent compression
+
+   * external/sepolicy/
+126d57e sepolicy: Remove profiles from context, moved to cm
+
+   * external/whispersystems/WhisperPush/
+125c51a WhisperPush: add Twilio SMS number for Indonesia
+
+   * frameworks/base/
+35b182b QSTileView: fix label recreate order
+4de351e SystemUI: be more event driven in keyguard visualizer
+d946b22 Fingerprint: Make the existing FingerprintService semi-useful.
+ff77667 SystemUI: workaround for visualizer flash on track change
+d2f90f5 SystemUI: dynamically generate visualizer color
+b515114 alarmmanager: Reduce calls to elapsedRealtime()
+290b5fb Fix a GL error leak issue
+5a98695 SystemUI: visualizer state improvements
+52a01e5 Don't use the SPN_STRINGS_UPDATED broadcast.
+d370ca5 Recalculate emergency after adding or removing mobile controllers.
+7553b92 Remove some useless code in KeyguardUpdateMonitor.
+899ef6c Optimize GPS property reloading.
+3e9f683 Add sms short codes for Indonesia
+dc6c43f SystemUI: fix dpad arrow keys after rotation
+837b967 Revert "base: zenmode: add 90 minutes downtime"
+3a26922 Fix LiveDisplay notification.
+
+   * frameworks/native/
+941007a surfaceflinger: use Mutex timedLock instead of tryLock loop
+7c9f0ca SF: Reduce resync samples without present
+
+   * frameworks/opt/telephony/
+67ea90e Send out a new SPN_STRINGS_UPDATED broadcast if the sub ID changes.
+3500144 Revert "SystemUI can not receive intent"
+
+   * hardware/libhardware/
+bba9dff Fingerprint [2/2]: Numerous Fingerprint Improvements
+
+   * hardware/qcom/audio-caf/msm8916/
+c483a9f post_proc: remove unnecessary command size check
+
+   * hardware/qcom/audio-caf/msm8994/
+51d2833 hal: Add option to use low latency as primary output
+afe3bed hal: Invert more build flags
+a4018a8 hal: Fix voice call recording for msm8974
+0cf4659 hal: Invert standard build flags
+eb91444 hal: Fix digital USB headset combo device
+28ad56e hal: Add support for dedicated VoIP devices
+
+   * hardware/qcom/bt/
+39bd94b Bluetooth: Don't return in case external ldo is not present
+
+   * hardware/qcom/fm/
+a82d69b Fix status text to reflect when FM is enabled.
+
+   * packages/apps/Calculator/
+64af337 Remove duplicate color.
+
+   * packages/apps/Profiles/
+f854275 Profiles: Refactor to point at Profiles in CMSDK.
+
+   * packages/apps/Settings/
+74d8211 Settings: Make the Wifi regions translatable
+7e7a8b9 Settings: fix confirm pattern crash on rotate
+
+   * packages/wallpapers/Galaxy4/
+0cc4e55 Galaxy4: Force 32bit
+
+   * packages/wallpapers/HoloSpiral/
+0085554 HoloSpiral: Force 32bit
+
+   * packages/wallpapers/MusicVisualization/
+621fdf5 MusicVisualization: Force 32bit
+
+   * packages/wallpapers/NoiseField/
+9084d74 NoiseField: Force 32bit
+
+   * packages/wallpapers/PhaseBeam/
+f1b3336 PhaseBeam: Force 32bit
+
+   * system/core/
+b6ebd65 healthd: allow custom charger
+
+   * system/extras/
+ad697d2 make_ext4fs: Fix mac build
+
+   * vendor/cm/
+d515adc Remove obsolete /cache/dalvik-cache stuff from init.local.rc
+0c80c8c Fix Sprint 3G
+
+   * vendor/cmsdk/
+4334b3d CMSDK: Introduce Profiles API from frameworks.
+
+===================================
+Since Mon Jun 22 11:11:44 UTC 2015
+===================================
+
+
+   * android/
+6901e79 manifest: remove final > extra
+55977e2 Add cmsdk prebuilts repo.
+
+   * bootable/recovery/
+ce34fee recovery: bu: disable xcomp during backup/restore
+
+   * device/lge/awifi/
+7a12ae5 Reorganize wifi files
+b036b29 Remove stale keylayout annotations
+bf072ae Switch to using wcnss_service to initialize wifi
+a8d7f93 sepolicy: Updates and fixes
+e159fd3 Enable OTA updates
+
+   * device/qcom/sepolicy/
+802f07f Label factory reset protection partition.
+
+   * external/android-visualizer/
+291c020 visualizer view: optimize allocations during drawing
+
+   * external/chromium_org/
+f02dfc7 net: disable SSLv3.
+
+   * external/dhcpcd/
+60ea6f5 dhcpcd: Send unique IAID
+
+   * external/sepolicy/
+887d7af Define types for userdata and cache block devices.
+
+   * external/stagefright-plugins/
+3272744 stagefright-plugins: Update codec list with capabilities
+36780e8 stagefright-plugins: Set sensible defaults for audio decoders
+e5f8759 ffmpeg: Remove a couple of codecs we don't need
+
+   * external/whispersystems/WhisperPush/
+34eeeb6 Automatic translation import
+
+   * frameworks/av/
+775c557 stagefright: ffmpeg: Slightly raise the threshold for the ffmpeg scanner
+
+   * frameworks/base/
+d596ba7 SystemUI: fix visualizer tile initial state
+165174e Frameworks/base: Add removeAll for ArraySet
+0e734d1 core: Protect against system server take down on empty tile order.
+a6b40de Automatic translation import
+4cd97f7 Default time format is hard coded to 24
+f166866 Revert "Determine default 12/24 hour time format setting from locale."
+462c9b9 base: zenmode: add 90 minutes downtime
+1cba30a wifi: Allow Settings to retrieve country code (2/3)
+25ea5bb base: wifi priorities
+6a5a1d8 Profiles: fix mute ring mode not applying
+7fa62bb themes: Load icon packs outside the big lock
+
+   * frameworks/opt/chips/
+ca3c8d1 Apply anti-aliasing when drawing chips.
+
+   * frameworks/opt/net/wifi/
+8360d47 Merge "wifi: Allow Settings to retrieve country code (1/3)" into cm-12.1
+
+   * hardware/libhardware/
+77cd2f4 Fingerprint: add explicit authenticate actions
+
+   * hardware/qcom/fm/
+8a1eda5 Automatic translation import
+
+   * kernel/lge/awifi/
+84ce4ec prima: Get MAC address from WCNSS platform device
+3dc2014 wcnss: Configure WLAN MAC addr through user control interface
+
+   * packages/apps/AudioFX/
+4804487 Automatic translation import
+
+   * packages/apps/BluetoothExt/
+5166471 Automatic translation import
+
+   * packages/apps/CMAccount/
+8d801e6 Automatic translation import
+
+   * packages/apps/CMBugReport/
+31ee191 Automatic translation import
+
+   * packages/apps/CMFileManager/
+22b9eab Shell console: fix bug in shell output stream
+1b15dff Automatic translation import
+91c9e78 Fix parsing of shell command output regardless of encoding
+
+   * packages/apps/CMUpdater/
+af7f779 Automatic translation import
+
+   * packages/apps/Calendar/
+0ddae60 Automatic translation import
+
+   * packages/apps/Camera2/
+9fe4127 Automatic translation import
+
+   * packages/apps/Contacts/
+420be57 Automatic translation import
+
+   * packages/apps/ContactsCommon/
+306c803 Automatic translation import
+
+   * packages/apps/DeskClock/
+3fec825 Automatic translation import
+
+   * packages/apps/Dialer/
+265e145 Automatic translation import
+
+   * packages/apps/Eleven/
+9b33f1a Automatic translation import
+
+   * packages/apps/Email/
+eeea1e1 Automatic translation import
+
+   * packages/apps/Gallery2/
+9c02ac4 Automatic translation import
+
+   * packages/apps/InCallUI/
+a3d7205 Automatic translation import
+
+   * packages/apps/LockClock/
+c71fdd2 Automatic translation import
+
+   * packages/apps/Mms/
+ac26093 Automatic translation import
+
+   * packages/apps/PhoneCommon/
+d8b2750 Automatic translation import
+
+   * packages/apps/Settings/
+d0bc382 Remove stray file
+8e6a1c3 Automatic translation import
+25f5a16 wifi: Allow configuration of country code for wifi (3/3)
+f1e81f5 settings: wifi priorities
+
+   * packages/apps/SetupWizard/
+e8ae2d7 Automatic translation import
+
+   * packages/apps/ThemeChooser/
+d72c46d Automatic translation import
+
+   * packages/apps/Trebuchet/
+b04fdb1 Automatic translation import
+cae9521 Fix unintended dynamic grid resize side effects.
+e806def Trebuchet: Fix popupMenu behavior and clean up old code.
+
+   * packages/apps/TvSettings/
+60e6e26 Automatic translation import
+
+   * packages/apps/UnifiedEmail/
+0068c4a Automatic translation import
+
+   * packages/inputmethods/LatinIME/
+fa184cb Automatic translation import
+
+   * packages/services/Mms/
+9193b7e Automatic translation import
+
+   * packages/services/Telecomm/
+9dcf39f Telecom : Add callInfo provider abstraction
+b537713 Automatic translation import
+
+   * packages/services/Telephony/
+0e1355e Automatic translation import
+
+   * packages/wallpapers/PhaseBeam/
+a2fe1f4 Automatic translation import
+
+   * packages/wallpapers/PhotoPhase/
+335829c Automatic translation import
+
+   * prebuilts/cmsdk/
+5bff108 prebuilts/cmsdk: Update API text for API level 1.
+819c312 prebuilts/cmsdk: Add prebuilt jars for cmsdk.
+db9ab1a prebuilts/cmsdk: Add api text files for API level 1.
+62a6bfd prebuilts/cmsdk: Add declared permission info for API level 1.
+cc52a1d Initial empty repository
+
+   * vendor/cm/
+51fd842 vendor/cm: Represent as CyanogenMod API's
+3314aac vendor/cm: Remove search widget from developer docs.
+be48647 vendor/cm: Point to proper prebuilts/cmsdk directories.
+
+   * vendor/cmsdk/
+4e081ae CMSDK: Update iconography for resource package.
+f1f9f25 CMSDK: Only target specific packages for checkapi.
+3ca85b3 CMSDK: Add SINCE API level for docs.
+c8b2fba Automatic translation import
+
