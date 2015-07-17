@@ -1,0 +1,807 @@
+===================================
+Since Mon Jul 13 12:14:12 UTC 2015
+===================================
+
+
+   * android/
+aa47169 cm: Use fork of aarch64 gcc for darwin as well
+
+   * art/
+1782e2d Improve dalvik cache pruning
+
+   * build/
+1db3c6e Allow setting the recovery density separately from the aapt config
+
+   * device/lge/awifi/
+9ceda71 Update CM hardware
+9848d0e Adjust to new charger images path
+5906205 Change path of /system/etc scripts
+f4d6ccd Increase read_ahead_kb for mmcblk1
+56a1542 Enable FIOPS IO scheduler by default
+
+   * device/qcom/common/
+c3f88a7 power: Send 8994 perf commands ourselves
+a8bf98b power: Add features to the 8994 PowerHAL
+
+   * external/bluetooth/bluedroid/
+a7d6435 bluedroid: Fix uninitialized variable warning
+
+   * external/whispersystems/WhisperPush/
+8226960 WhisperPush: Update Terms Of Service and Privacy URL
+
+   * frameworks/av/
+9d665ab camera: add ability for a device to specify MAX_CAMERAS
+b55b927 stagefright: Remove deprecated FFMPEG config
+57db9b4 Prevent reading past the end of the buffer in 3GPP
+9824bfd Prevent integer underflow if size is below 6
+889ae4a Fix integer overflow when handling MPEG4 tx3g atom
+b1f2929 Fix integer underflow in covr MPEG4 processing
+7ff5505 Prevent integer overflow when processing covr MPEG4 atoms
+
+   * frameworks/base/
+1d206df SettingsProvider: Update action for Profile picker.
+d7f031a Fingerprint: Add break after MSG_REMOVED
+f3c64cc Authenticate When Keyguard Resumes From Camera
+c8ff1a9 Lazy Fix: "More Settings" localization
+d012b00 livedisplay: Round values up
+675f662 Track current user id in ThemeService
+d8c40f5 Fix mounting of non-FAT formatted SD cards (1/2)
+5565e08 MediaScanner: Add support for default ringtones per sim
+e228c96 Revert CAF's default system sound settings
+aa7695a MediaPlayer: Add multi SIM ringtone support
+522e499 livedisplay: Fix issue where settings weren't applied
+e5c1917 CaptivePortal: Remove captive_portal_login intent-filter
+bc85f5e CaptivePortal: Assert dataUri to prevent possible NPE
+346ac31 Revert "Bluetooth: Check for mPanservice before changing tethering state"
+
+   * frameworks/opt/hardware/
+0a583f1 cmhw: Add auto contrast support
+
+   * hardware/qcom/audio-caf/msm8994/
+8d3b159 Add special case for stereo camcorder
+
+   * hardware/qcom/display-caf/msm8974/
+6c4ceb1 Merge branch 'LA.BF.1.1.1_rb1.26' of git://codeaurora.org/platform/hardware/qcom/display into cm-12.1
+
+   * hardware/qcom/display-caf/msm8994/
+121462e Merge branch 'LA.BF64.1.2.1_rb2.22' of git://codeaurora.org/platform/hardware/qcom/display into cm-12.1
+
+   * hardware/qcom/media-caf/msm8974/
+bbe4560 Merge branch 'LA.BF.1.1.1_rb1.26' of git://codeaurora.org/platform/hardware/qcom/media into cm-12.1
+
+   * hardware/qcom/media-caf/msm8994/
+7b6fa49 Merge branch 'LA.BF64.1.2.1_rb2.22' of git://codeaurora.org/platform/hardware/qcom/media into cm-12.1
+
+   * hardware/ti/wlan/
+3c91c48 wl12xx: Fix compilation warnings
+
+   * kernel/lge/awifi/
+01f0009 awifi: defconfig: Enable FIOPS IO scheduler
+10f9c90 block: fiops ioscheduler core
+
+   * packages/apps/CMFileManager/
+84ff5ed Changed NavigationView.refresh() in onResume() of the activity to try to restore the original position.
+b8aa362 Preferences: Move huge paragraph description to own item
+707e828 ProgressDialog: Require user to explicitly use the cancel button.
+e09d843 Editor: Handle content uri's in the editor
+
+   * packages/apps/CMUpdater/
+84d1f6a CMUpdater: Improve Android Wear notifications
+
+   * packages/apps/ContactsCommon/
+ec13cc9 CheckableFlipDrawable : Add getter for front drawable
+
+   * packages/apps/DeskClock/
+d815eef Fix rescheduling of alarms that are snoozed
+
+   * packages/apps/Eleven/
+39dc0b6 eleven: fix invalid srt formats
+
+   * packages/apps/Gallery2/
+0e0c914 Gallery2: Intents for image/video directory viewing/picking
+
+   * packages/apps/LockClock/
+652fb4e LockClock: Only show timestamp if it can fit
+
+   * packages/apps/Mms/
+d655920 Mms : Ensure text mode supports multiple content-types
+e63abd6 Drafts: Prevent duplicate drafts from being added
+651cbbd Compose:  Hiding the "To" label when editing the subject
+0e5e3aa Show Calendar Event attachment only if an activity can respond to the intent
+e0d4d06 QuickMessage: Add shortMessage to inputType
+
+   * packages/apps/Settings/
+8f5c0e5 Remove hardcoded textAppearance for better theme support.
+7680a06 Fix config_proximityCheckOnWake setting handling
+c8ccfc8 MasterClear: fix FRP wipe crash
+79e571f Keep screen on during fingerprint enrollment
+6c9cb8b Protected Apps: Monitor unlock status
+b0cec6d Settings: fix setting light FC
+5e7a3f0 Fingerprint: Include "Fingerprint" in the unlock title
+7935167 Fix aliasing in FingerprintProgressBar
+cc98438 Fix navigating fallback security via setup wizard
+12c3b4e Fingerprint: Match Enrollment UI with SetupWizard
+fe076e3 settings: Fix livedisplay settings
+46b8b55 Fingerprint: Cancel timeout if user leaves enrollment
+ceef03d Use theme_accent for manage_fingerptins_primary_color
+827f749 Remove manage fingerprints from enrollment setup
+33998c2 OOBE: Set next label when fingerprint enrollment done
+f0759c9 Add LOCKSCREEN_BIOMETRIC_WEAK_FALLBACK to fallbackIntent
+
+   * packages/apps/SetupWizard/
+c78801e Reword strings on FingerprintSetupPage
+6d93813 Move fingerprint setup to end of OOBE
+eff7427 WifiSetup: Pass the correct componentName and data for captivePortal
+
+   * packages/apps/Stk/
+73dd243 Revert "STK: use single icon as per latest AOSP 5.1"
+
+   * packages/apps/ThemeChooser/
+255d0cf Update iconography.
+
+   * packages/apps/Trebuchet/
+a433e1d Trebuchet: fix voice button proxy
+0b93e24 Loader: use INVALID_RESTORE_PAGE to avoid unnecessarily synchronizing
+171a743 Wallpaper: Allow multiple partners to be loaded
+d2e4bae Launcher: Close OverviewMode when transitioning back to Workspace.State.NORMAL
+5e950d2 Launcher: Close open folder when transitioning back to Workspace.State.NORMAL
+2ee7cce Folder Layout Revision
+9711ba2 Protected Folders: Prevent the folder name from covering the toggle
+16570fb Fade Adjacent Screens: disable this feature for App Drawer (paged)
+
+   * packages/providers/MediaProvider/
+646d632 Fix mounting of non-FAT formatted SD cards (2/2)
+
+   * packages/services/Telecomm/
+9f46b9b Merge "Update to latest api level" into cm-12.1
+
+   * prebuilts/cmsdk/
+d9c2662 prebuilts/cmsdk: Make sure readme is markdown format.
+5ec9336 cmsdk: Fix spelling error.
+1a66ba2 prebuilts/cmsdk: Update for API level naming.
+aefbc1f prebuilts/cmsdk: Create and update 2nd api level text files.
+279b0c0 prebuilts/cmsdk: Update perms file for API level 2.
+7701364 prebuilts/cmsdk: Update readme for perms.
+fc45eab prebuilts/cmsdk: Update readme.
+74e87d7 prebuilts/cmsdk: Create new future-release blobs.
+
+   * system/core/
+58e24e4 healthd: Support QC2.0 type charger
+813e0a0 Added umount to init
+
+   * vendor/cm/
+9bf517f Hack in support for the old version of Maven that Ubuntu apparently ships with
+d5420c0 rendang: Remove unwanted APNs
+5a6bda2 CYNGNOS-454 - Fix config_preferred_apn Overrides
+f208523 sepolicy: system_app: Remove performace setting related entries
+2254bba Yet another massive APN list
+bcb6d98 vendor/cm: Bump cmsdk version.
+
+   * vendor/cmsdk/
+af4e7b4 cmsdk: Update PROFILE_PICKER intent action.
+c67a9eb cmsdk: Clean up constant linking for javadoc.
+06fc449 cmsdk: Return UNKNOWN for impossible sdk ints.
+6714bfe cmsdk: Add documentation for validating API level.
+577fe6a cmsdk: Add copyright header for ProfileManagerTest.
+d848990 cmsdk: Add functional manual test for custom uri publish tile.
+32e97d8 cmsdk: Add unit tests for CustomTile parceling.
+1f5ae92 cmsdk: Add simple profile manager tests.
+662628a cmsdk: Add unit tests for Profile parceling.
+acc8708 cmsdk: Add unit tests for versioning with os.Build
+e341fb2 cmsdk: Fix Profile parceling.
+e953794 cmsdk: Add CMStatusBarManager and CustomTile.Builder tests.
+ca648dc cmsdk: Update profiles functional tests.
+c9295fb cmsdk: Clear calling identity when resetAll is called.
+f9ec3a4 cmsdk: Add boysenberry to api text.
+a7fb315 cmsdk: Name api level 2 as boysenberry.
+6352497 cmsdk: fix cannot create handler
+eddb89c cmsdk: Update api text files.
+e3ad391 cmsdk: Target 2nd API level on documentation generation.
+6f58446 cmsdk: @hide everything relating to ProfileGroups, until complete.
+5c8fe31 cmsdk: Update profile settings documentation.
+
+===================================
+Since Wed Jul  8 10:43:23 UTC 2015
+===================================
+
+
+   * android/
+5515fd9 cm: Use fork of aarch64 gcc
+
+   * art/
+913010c Revert "Revert "AArch64: Fix incorrect use of preceding LIR.""
+
+   * bootable/recovery/
+0401aaa updater: Add LZMA support to blockimg
+
+   * build/
+1e8eaf9 arm64: Enable Cortex A53 Errata 843419, 835769 ldflags
+808531f AArch64: Addressing Cortex-A53 erratum 835769
+8ab3618 Revert "Disable -mcpu=cortex-a15 flag for krait"
+0f1ef4b tools:releasetools:Use timestamp from build.prop while building system.img
+cd8cb89 build: Fix device detection for a few of the envsetup commands
+c13c1b2 build: Fix image creation for F2FS-only configuration
+e78b239 releasetools: Add support for LZMA in blockimgdiff
+
+   * device/qcom/sepolicy/
+fa2e85d Seandroid: Add policy for dts configurator and notifier nodes
+
+   * external/stagefright-plugins/
+b384c5f stagefright-plugins: Restructure the code
+68d9c45 stagefright-plugins: Remove Vorbis/MP3/H263/H264/HEVC
+
+   * external/whispersystems/WhisperPush/
+69f768b Automatic translation import
+
+   * external/wpa_supplicant_8/
+48e2a66 eap_peer: Make the QMI EAP proxy a standalone lib
+
+   * frameworks/av/
+ac27b63 stagefright: Move a bunch of FFMPEG stuff out of here
+d562715 stagefright: Add support for loading a custom OMXPlugin
+
+   * frameworks/base/
+6d9989c NavigationBarView: Set buttonWithTagVisibility for Search
+773e1f8 Automatic translation import
+7633157 Keyguard Fingerprint: Send Unlock Stats
+0e2fbb8 SettingsProvider: add overlay for SWAP_VOLUME_KEYS_ON_ROTATION
+16d4d50 Fix build break introduced in 83b589ec9c743174ac473622adb3f759e9d598af
+97327e4 systemui: restore space between clock & battery
+83b589e Update indonesia country code in PhoneNumberUtils
+c1019bf When calling indonesia using +62 prefix while already in indonesia, replace +62 prefix with 0 (CDMA only)
+01c3ea0 core: Continue stripping out Profiles related code.
+7c1ee7b Account for cmsdk resources when attaching theme assets
+116dedc androidfw: Declare and load cmsdk resource package w/ id.
+8fec3eb core: Factor out profiles related resources.
+1d1f5f0 systemui: fix battery text level visibility
+c9561a3 Fingerprint: Add getNumEnrollmentSteps [1/2]
+1f0667a qs: fix NPE in visualizer tile
+51d76f9 Keyguard Fingerprint: Lock immediately when fp is used [1/2]
+71fe5db SystemUI: more keyguard visualizer tweaks
+1ca33c1 Improve dock battery strings
+e8604c8 msim: Fix saving default sim from select SIM dialog (1/2)
+672fa1e WallpaperManagerService: use a single file observer
+ba6dd62 base: Fix RESET_BATTERY_STATS permission
+910397f base: dock battery
+c2614be Fingerprint: Vibrate device.
+2a80ec9 SystemUI: fix keyguard unlock drawable not updating
+d2d714a Fingerprint: Get current user id via Process.myUserHandle()
+3643d91 Add fingerprint to DB before calling clients
+121fb1e [1/2] Camera button support
+1b34a5a Fix keyguard wallpaper issues
+afd5ad9 Keyguard Fingerprint: Don't cancel if device doesn't have the feature
+bae5505 SystemUI: Add uses-permission for fingerprint
+ba9c981 Fingerprint: Secure the dump
+
+   * frameworks/native/
+7c2c333 Revert "Add OMX_AUDIO_CodingAPE and OMX_AUDIO_CodingDTS"
+909ee77 Tuning compiler thread count for optimal application install times
+6246d07 SF: Skip render-to-texture for color transforms
+
+   * frameworks/opt/net/wifi/
+1391ee9 Fix memory leak in WifiNative
+
+   * hardware/libhardware/
+62520f1 audio: Notify amplifier HAL of device enable/disable
+1d03c03 Fingerprint: Add getNumEnrollmentSteps [2/2]
+
+   * hardware/qcom/audio-caf/msm8994/
+b49aaff Merge branch 'LA.BF64.1.2.1_rb2.21' of git://codeaurora.org/platform/hardware/qcom/audio into cm-12.1
+dabc25c hal: Notify amplifier of device enable/disable
+b5ab239 hal: pass samplerate as is to tiny compress
+
+   * hardware/qcom/display-caf/msm8974/
+8751e83 hwc: Handle DOZE_SUSPEND properly
+
+   * hardware/qcom/display-caf/msm8994/
+9b2766a Merge branch 'LA.BF64.1.2.1_rb2.21' of git://codeaurora.org/platform/hardware/qcom/display into cm-12.1
+
+   * hardware/qcom/fm/
+8cdc302 Automatic translation import
+
+   * hardware/qcom/media-caf/msm8994/
+4e647f5 Merge branch 'LA.BF64.1.2.1_rb2.21' of git://codeaurora.org/platform/hardware/qcom/media into cm-12.1
+
+   * packages/apps/Bluetooth/
+b473fdb Automatic translation import
+
+   * packages/apps/BluetoothExt/
+85af06e Automatic translation import
+
+   * packages/apps/CMAccount/
+dff2d23 Automatic translation import
+
+   * packages/apps/CMFileManager/
+7310a29 Automatic translation import
+8cd911b configurationChanged: Don't handle the orientation change in our main Activity
+c283288 Secure Storage: Fix unlock button
+b4d6b6e Easy Mode: Fix exit on easy mode screen
+
+   * packages/apps/Calculator/
+142a29b Floating Calculator: Fix Hidden row of buttons
+
+   * packages/apps/Calendar/
+a2a65e2 Automatic translation import
+
+   * packages/apps/Camera2/
+53d6854 Automatic translation import
+
+   * packages/apps/Contacts/
+e2cc11b Automatic translation import
+
+   * packages/apps/ContactsCommon/
+9109519 Automatic translation import
+
+   * packages/apps/DeskClock/
+bc4da38 Automatic translation import
+
+   * packages/apps/Dialer/
+473c0e1 Automatic translation import
+
+   * packages/apps/Eleven/
+0481caf Automatic translation import
+
+   * packages/apps/Email/
+b294161 Automatic translation import
+
+   * packages/apps/Gallery2/
+fe5101b Automatic translation import
+9abe709 Photo Gallery widget: fix NPE in getViewAt
+
+   * packages/apps/InCallUI/
+2106d69 Automatic translation import
+
+   * packages/apps/LockClock/
+ad1d777 Automatic translation import
+
+   * packages/apps/Mms/
+86408dd Automatic translation import
+f5164b3 Quick Message: Fix dual sim picker
+9fc3f93 Enable heads-up style notifications on Mms app
+
+   * packages/apps/Nfc/
+9feec31 Automatic translation import
+
+   * packages/apps/PackageInstaller/
+50161ae Automatic translation import
+5040ee6 PackageInstaller: add hook to manage packages via PRE_BOOT_COMPLETED event
+
+   * packages/apps/PhoneCommon/
+813e946 Automatic translation import
+
+   * packages/apps/Settings/
+8b5f667 Remove unused xml
+a8c4e44 Automatic translation import
+e0e7a64 Set untranslatable
+3c2f3e5 Add fingerprint enrollment stats
+b57b79d Add SetupManageFingerprints to setup wizard flow
+478ccf4 Cancel error timeout when enrollment finished
+b46aee4 Settings: hide light pulse settings if not available
+e134666 Settings: Point to classes within cmsdk.
+97494e0 Enroll fingerprint via SetupWizard [1/2]
+38a933b Show error state when fingerprint read times out
+8a8121a Only show fingerprint for primary user
+a03f2d2 Keyguard Fingerprint: Lock immediately when fp is used [2/2]
+5b1d69d Improve dock battery strings
+7003a4d Settings: update community metrics
+2709976 settings: dock battery
+e6e6b62 Fingerprint: Fingerprint enrollment
+ef0c34f Fingerprint: Add summary text to 'manage fingerprints'
+b733f0a [2/2] Camera button support
+
+   * packages/apps/SetupWizard/
+79f63d2 Automatic translation import
+1125b8d SetupWizard: Fix translatability
+b28f9c0 Enroll fingerprint via SetupWizard [2/2]
+
+   * packages/apps/Stk/
+f7df6b5 Automatic translation import
+
+   * packages/apps/ThemeChooser/
+4c096d3 Automatic translation import
+
+   * packages/apps/Trebuchet/
+926df56 Automatic translation import
+270da93 Transition Effects: stack transition effect
+1ac777c FocusHelper: handle NPE with when getting workspace child
+aa2cb4a Trebuchet: display search widget search box if available
+
+   * packages/apps/TvSettings/
+5121874 Automatic translation import
+
+   * packages/apps/UnifiedEmail/
+e8e14aa Automatic translation import
+
+   * packages/inputmethods/LatinIME/
+27f8abb Automatic translation import
+
+   * packages/providers/DownloadProvider/
+4bf2413 Automatic translation import
+
+   * packages/providers/TelephonyProvider/
+fbf5822 Automatic translation import
+
+   * packages/services/Mms/
+bcfd519 Automatic translation import
+
+   * packages/services/Telecomm/
+bcea2b8 Automatic translation import
+c023867 Update to latest api level
+d5e706b msim: Fix saving default sim from select SIM dialog (2/2)
+
+   * packages/services/Telephony/
+d8be3e7 Automatic translation import
+5f87833 Rewrite network type summary handling
+
+   * packages/wallpapers/PhaseBeam/
+ae59914 Automatic translation import
+
+   * system/core/
+b0161ae libutils: Improve support for POSIX timers
+fe93cfb healthd: dock battery
+
+   * vendor/cm/
+7c96869 cm: Update properties and libs for stagefright-plugins
+c6d0ab5 Updated APN for Austrian Carrier Yesss.
+b1f4115 Prevent Maven target from grabbing transitive dependencies
+
+   * vendor/cmsdk/
+a7579da Automatic translation import
+cf0bfd3 CMSDK: Begin documentation and testing for profiles.
+125c899 CMSDK: Utilize CMSDK_PACKAGE_ID.
+6e46829 CMSDK: Introduce factored out resources from framework.
+
+===================================
+Since Sun Jul  5 10:14:38 UTC 2015
+===================================
+
+
+   * external/stagefright-plugins/
+ce6fc45 stagefright-plugins: Fix adaptive buffer and crop handling
+a82d5bd stagefright-plugins: Add special handling of DivX files
+529ea8c stagefright-plugins: Improve seeking further
+
+   * frameworks/av/
+7533421 audio: Reduce logging verbosity
+b2eb385 Acodec: Add interlaced video support
+1a4c727 audio: fallback to SW decoder for video clips
+38a308c libmedia: restrict nuplayer from using track offload
+
+   * frameworks/base/
+213331f Remove memory leak in PersistentDataBlockService jni
+5303b54 DO NOT MERGE Fix JNI global references leak in AudioEffect
+af6d9b9 Avoid AsyncTask ThreadPool leak in RecentTaskLoaser
+eff323b backup: Fix a system server crash
+e5cddac Buttons: Launch camera activity instead of BroadcastReceiver
+8cba8af Even more duplicates
+1d4e84e Rewrite Keyguard Visualizer
+0686de9 Add fingerprint permission [1/2]
+bd62a43 Add a few more default QS tiles
+4b1337e livedisplay: Fix outdoor mode detection
+b1d1b1a Barrier only messages shouldn't prevent the idle handlers from running
+a263cc2 Add Process IOWAIT info to ANR dump
+80f14ac Avoid ANR loop because of queued-up ANR runnables
+4587c32 Use isolated thread to perform onStart()
+ae57863 SystemUI: dismiss brightness slider on screen off
+f3fbf88 Fingerprint: Reset state when client cancels
+9b3d0c9 Keyguard: Increase time to show hint texts
+699de3b Keyguard: Add fingerprint icon to the bottom view
+
+   * hardware/qcom/audio-caf/msm8974/
+f7bddec hal: Notify amplifier of device enable/disable
+
+   * hardware/qcom/display-caf/msm8974/
+2762d22 Merge AU_LINUX_ANDROID_LA.BF.1.1.1_RB1.05.01.01.042.041 on remote branch
+
+   * hardware/qcom/display-caf/msm8994/
+5995be6 Merge AU_LINUX_ANDROID_LA.BF64.1.2.1_RB2.05.01.01.081.049 on remote branch
+
+   * hardware/qcom/media-caf/msm8916/
+26f4ba7 mm-video-v4l2: Remove useless build warning
+
+   * hardware/qcom/media-caf/msm8974/
+2ac4b3e Merge AU_LINUX_ANDROID_LA.BF.1.1.1_RB1.05.01.01.042.041 on remote branch
+
+   * hardware/qcom/media-caf/msm8994/
+3215e70 Merge AU_LINUX_ANDROID_LA.BF64.1.2.1_RB2.05.01.01.081.049 on remote branch
+
+   * kernel/lge/awifi/
+13dc1e7 defconfig: awifi: Change default IO scheduler to NOOP
+57446dc Update from LG VK81035A sources
+
+   * packages/apps/CMFileManager/
+c6207b6 Android.mk don't build source components in tests/
+
+   * packages/apps/Calculator/
+c6121ca Cursor: Keep visible for long numbers
+
+   * packages/apps/Dialer/
+3575201 Dialer: Enable Call Recording for Romania
+
+   * packages/apps/Eleven/
+7441c5d Dynamically generate visualizer color
+
+   * packages/apps/Mms/
+c67b355 Contact vCard: Dont crash if contact that is sent no longer exits.
+
+   * packages/apps/Settings/
+5e3695e Add fingerprint permission [2/2]
+0cbb3cf Settings: Add config for not allowing calls/sms being set to > slot 1
+198a64f Make preferred install location option configurable.
+
+   * packages/apps/Trebuchet/
+db86a7f Badge: Check count on bind
+
+   * packages/providers/TelephonyProvider/
+aa98e82 MmsProvider : Add ability to get thread information in search
+
+   * packages/services/Telephony/
+fe084f7 Telephony : Add support for config_hardcodeDefaultMobileNetworks
+
+   * system/core/
+a213c36 Charger: Add font to show real battery capacity in charger mode.
+
+===================================
+Since Thu Jul  2 15:20:55 UTC 2015
+===================================
+
+
+   * android/
+5fe9731 5.1.1_r3 -> 5.1.1_r6
+
+   * build/
+bf3538c Merge tag 'android-5.1.1_r6' into cm-12.1
+
+   * device/lge/awifi/
+9d9b4d3 Revert "Revert "Add support for F2FS on data and cache""
+
+   * device/qcom/sepolicy/
+238dd07 sepolicy: add permissions to set system property
+881eea7 sepolicy: add rule to support tcm write on dpmwrapper socket
+42fc5b9 sepolicy: allow dpmd to create self socket and netlink socket.
+af2c6fd sepolicy: allow dpmd to connect to system_server
+6fdf10d sepolicy: Allow iptable rule addition when WQE is enabled
+6599f2c cnd: Allow nims to be removed
+324ba9f Sepolicy: add rule to support ATP feature
+
+   * external/flac/
+78683d1 Merge tag 'android-5.1.1_r5' into cm-12.1
+
+   * external/libnfc-nci/
+4b08a00 Merge branch 'cm-12.1-nxp' into HEAD
+48ea540 pn547: Don't attempt to downgrade firmware
+
+   * external/libpng/
+3ffd050 Merge tag 'android-5.1.1_r5' into cm-12.1
+
+   * external/libvpx/
+bd6949a Merge tag 'android-5.1.1_r5' into cm-12.1
+
+   * external/stagefright-plugins/
+e9eddbf stagefright-plugins: Disable lowres
+
+   * external/whispersystems/WhisperPush/
+f22222a WhisperPush: accept registration SMS from any number
+
+   * frameworks/base/
+c109747 SystemUI: Fix FC when mHandler is null
+945a762 DO NOT MERGE Don't take flags when creating app widget config activity.
+9b7da08 Remove implementation of deprecated method.
+0488c4f Make Bitmap_createFromParcel check the color count. DO NOT MERGE
+c365c2f Do not paint shadow if outside of the clip area
+1ddb76f Add Asset management support for fonts.
+b9bad64 Mark persistent apps as such when the ProcessRecord is created
+912c1a7 Revert "Wait until the Keyguard is drawn to dismiss the boot dialog."
+3f2a0e7 Store manifest hash code in PackageParser.Package
+59a42f4 Keyguard: Show retry text on unidentified fingerprint
+6831615 SystemUI: fix clock jumping when expanding QS from lockscreen
+7052bad Keyguard: Show fallback after 2 failed auth attempts
+a6fe97c Keyguard: Authenticate with fingerprint
+
+   * frameworks/compile/slang/
+79ee331 Merge tag 'android-5.1.1_r5' into cm-12.1
+
+   * frameworks/opt/colorpicker/
+2a8218e Merge tag 'android-5.1.1_r5' into cm-12.1
+
+   * frameworks/opt/photoviewer/
+7fd5361 Merge tag 'android-5.1.1_r5' into cm-12.1
+
+   * frameworks/support/
+fc5b106 Merge tag 'android-5.1.1_r5' into cm-12.1
+
+   * hardware/qcom/audio-caf/msm8960/
+39d5260 audio: Notify amplifier of device enable/disable
+298039c audio: Refactor amplifier_set_device logic
+
+   * hardware/qcom/keymaster/
+8e39456 keymaster: fix build for msm8994
+f33d1ad keystore: Enable building on msm8992 and msm8994
+
+   * hardware/qcom/media-caf/msm8994/
+394d7c6 mm-core: Limit number of NT mode audio decoders
+
+   * kernel/lge/awifi/
+6cb88d5 defconfig: awifi: Enable f2fs
+2e4a5f5 fs: introduce a generic shutdown ioctl
+f185ef8 f2fs: sync with https://git.kernel.org/cgit/linux/kernel/git/jaegeuk/f2fs.git/log/?h=linux-3.4
+
+   * packages/apps/Dialer/
+8a7faff Fix Dialer FC on guest user with phone calls allowed
+
+   * packages/apps/InCallUI/
+e99ddf8 InCallUI: Unbreak heads-up disabled incoming call.
+
+   * packages/apps/Settings/
+51b8cad Settings: Remove Performance Settings
+2610125 Fix patch derpage for fingerprint settings
+
+   * vendor/cm/
+71983e8 Additional APN cleanup and modifications
+c38581c Thou shalt not nano
+
+===================================
+Since Tue Jun 30 19:40:08 UTC 2015
+===================================
+
+
+   * device/lge/awifi/
+20e95a4 Change charger percentage position and size
+5ca9d44 Disable init blank in charger
+0442503 Reenable charger percentage
+
+   * external/whispersystems/WhisperPush/
+d4bae94 Automatic translation import
+9edd25a WhisperPush: add weekly active users metric
+ba78f1e WhisperPush: service for WPv2 update to interrogate/disable v1
+
+   * frameworks/base/
+332f903 Automatic translation import
+1d11593 Fingerprint: disallow API calls when fingerprint is not available
+1718ee0 Wait until the Keyguard is drawn to dismiss the boot dialog.
+e52c239 WhisperPush: allowing whitelisting of needed framework permissions
+
+   * frameworks/native/
+19e236c native: dock battery
+
+   * hardware/qcom/audio-caf/msm8994/
+406edba Merge AU_LINUX_ANDROID_LA.BF64.1.2.1_RB2.05.01.01.081.048 on remote branch
+
+   * hardware/qcom/display-caf/msm8994/
+6327813 Merge "gralloc: Fix RAW10 stride"
+59fed77 Merge AU_LINUX_ANDROID_LA.BF64.1.2.1_RB2.05.01.01.081.048 on remote branch
+
+   * hardware/qcom/fm/
+31d334e Automatic translation import
+
+   * hardware/qcom/media-caf/msm8994/
+28697a8 Merge AU_LINUX_ANDROID_LA.BF64.1.2.1_RB2.05.01.01.081.048 on remote branch
+
+   * hardware/ti/wlan/
+1cdbebc ti: Add interface_mtu request
+
+   * packages/apps/BluetoothExt/
+9b7bdf8 Automatic translation import
+
+   * packages/apps/CMAccount/
+58f3401 Automatic translation import
+
+   * packages/apps/CMBugReport/
+165166e Automatic translation import
+
+   * packages/apps/CMFileManager/
+a2f4a60 Automatic translation import
+
+   * packages/apps/CMUpdater/
+e693b46 Automatic translation import
+
+   * packages/apps/Calculator/
+51f90c4 Automatic translation import
+
+   * packages/apps/Calendar/
+25f247c Automatic translation import
+
+   * packages/apps/Camera2/
+3f22bec Automatic translation import
+
+   * packages/apps/Contacts/
+f81964f Automatic translation import
+b267d4b Contacts: Fixed "%s" appearing in contact options in some languages
+
+   * packages/apps/ContactsCommon/
+68932a5 Automatic translation import
+
+   * packages/apps/DeskClock/
+9c89be4 Automatic translation import
+
+   * packages/apps/Dialer/
+a5f3526 Automatic translation import
+
+   * packages/apps/Eleven/
+3acc661 Automatic translation import
+
+   * packages/apps/Email/
+aa11058 Automatic translation import
+
+   * packages/apps/Gallery2/
+7a90da1 Automatic translation import
+
+   * packages/apps/InCallUI/
+a27f9ea Automatic translation import
+
+   * packages/apps/LockClock/
+b84dc10 Automatic translation import
+
+   * packages/apps/Mms/
+da1502d Automatic translation import
+
+   * packages/apps/PhoneCommon/
+95d5378 AnimUtils : clear listeners when animation completes or is terminated
+
+   * packages/apps/Settings/
+17942d9 Automatic translation import
+95bf6ff Settings: use WhisperPush v2 if it is installed in place of v1
+
+   * packages/apps/SetupWizard/
+a1c8217 Automatic translation import
+
+   * packages/apps/SoundRecorder/
+279e7c3 Automatic translation import
+
+   * packages/apps/Stk/
+2f91312 Automatic translation import
+
+   * packages/apps/Terminal/
+70bf0bf Automatic translation import
+
+   * packages/apps/ThemeChooser/
+20b9f90 Automatic translation import
+
+   * packages/apps/Trebuchet/
+580f4f4 Automatic translation import
+769cdc7 Update default workspace configuration.
+
+   * packages/apps/TvSettings/
+4574978 Automatic translation import
+
+   * packages/apps/UnifiedEmail/
+1bb85d9 Automatic translation import
+
+   * packages/inputmethods/LatinIME/
+33da3c2 Automatic translation import
+
+   * packages/providers/DownloadProvider/
+4d94436 Automatic translation import
+
+   * packages/providers/ThemesProvider/
+b016009 Automatic translation import
+
+   * packages/services/Telecomm/
+9cf9699 Automatic translation import
+
+   * packages/services/Telephony/
+07866b3 Automatic translation import
+
+   * packages/wallpapers/Galaxy4/
+5cf246b Automatic translation import
+
+   * packages/wallpapers/PhaseBeam/
+185c9a3 Automatic translation import
+
+   * packages/wallpapers/PhotoPhase/
+553bd98 Automatic translation import
+
+   * system/core/
+e05665a Add Wileyfox VID part 2
+429e98c Add Wileyfox VID
+
+   * vendor/cm/
+9dfe560 Vendor: Fix "mts" carrier password
+a0040ca vendorsetup: Handle new jenkins build parameters
+3f7699f Additional European MVNOs
+015d4fd Massive APN Update
+
+   * vendor/cmsdk/
+1ba6ee2 Automatic translation import
+cc97903 CMSDK: Make sure to initialize ProfileTriggerHelper.
+
