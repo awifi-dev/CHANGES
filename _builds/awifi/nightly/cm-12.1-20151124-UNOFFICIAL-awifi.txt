@@ -1,0 +1,634 @@
+===================================
+Since Sat Nov 21 15:36:40 UTC 2015
+===================================
+
+
+   * build/
+60ca2b7 kernel: add `make kernelxconfig' target
+
+   * device/lge/awifi/
+095b4a0 Revert "cmhw: Switch to PCC calibration interface"
+86ad175 Changes in power configuration
+
+   * external/libnetfilter_conntrack/
+78f8a86 Fix build breaks on L
+
+   * kernel/lge/awifi/
+bebb242 Revert "awifi: defconfig: Disable LGE_KCAL"
+c067ccf Revert "video: mdp4: Color temperature interface using PCC"
+27649d6 Revert "mdp4: pcc: fix PCC disablement"
+f33b079 Revert "msm: mdp: Restore PCC config when MDP goes on"
+
+   * packages/apps/CMBugReport/
+a6f67a6 Increase timeout on upload
+
+   * packages/apps/Dialer/
+b159add Remove duplicate permission "android.permission.INTERACT_ACROSS_USERS"
+5fbf6ec Add people and reverse lookup provider "Auskunft" (AT).
+
+   * packages/services/Telecomm/
+87c8bd7 Fix getAllPhoneAccounts() returning no accounts.
+
+===================================
+Since Sat Nov 14 01:33:44 UTC 2015
+===================================
+
+
+   * build/
+1395703 gdbclient: fix build output directory path
+
+   * device/lge/awifi/
+92e2f3f Use hwui props from flo
+eaf3be1 Remove time_daemon in favor of RTC write
+7022494 fstab: use fs_mgr to format cache and userdata if unformatted
+076a05d fstab: put f2fs above ext4
+0421497 init.awifi.rc: Fixes and updates
+8f5bb1c cmhw: Switch to PCC calibration interface
+
+   * frameworks/base/
+fea0a82 SysUI: Fix navbar theme changing with status bar
+e49d5ea Recents: Fix IndexOutOfBoundsException
+ed834ca Shell: Declare cyanogenmod WRITE for system and secure settings.
+efb9ba7 Listen phone state change
+
+   * frameworks/opt/chips/
+778bda8 Fix plus sign on number dropdown
+
+   * frameworks/opt/telephony/
+2057518 Fix default network mode reset on sim1
+
+   * kernel/lge/awifi/
+23e70b3 timed_gpio: fix order of destruction
+752662f tcp_cubic: do not set epoch_start in the future
+d6a3b18 tcp_cubic: better follow cubic curve after idle period
+5af274a msm: SSR: Remove useless warning
+9ee66a1 msm: video: Checks for code robustness
+a3cae07 msm: vidc: cache-flush encoder output buffers after alloc
+e9398b7 net: fix iterating over hashtable in tcp_nuke_addr()
+5110611 msm: mdp: Update sync pt. behaviour
+66170c6 mm: reorder can_do_mlock to fix audit denial
+417e488 msm: smd_pkt: Avoid prematurely stashing driver info
+619ed56 mach-msm: subsystem_restart: Fix CPU detection
+45d8e8d alarm: Re-add msmrtc_alarm_read_time
+48bbab4 arm: msm: add alarm reboot reason
+469d279 kernel: alarm: Do not call rtc_alarm_irq_enable in IRQ Disabled context
+5745896 kernel: alarm: add dedicated alarm type for poweroff alarm
+f91904e kernel: alarm: :fix the BUG that device automatically powers on
+bf4acc3 rtc: alarm: Set power-on alarm 120 sec before actual alarm time
+7a1bb24 rtc: alarm: Add power-on alarm feature
+cb2afa7 rcu: Add RCU_FAST_NO_HZ tracing for idle exit
+60fc7dd rcu: Add a module parameter to force use of expedited RCU primitives
+f992838 [backport] sched_rt: Upstream fixes
+e78ddb8 [backport] sched: Misc upstream scheduler improvements
+e302b3a [backport]: sched: Load-based CPU boosting
+e36d576 sched: Remove get_online_cpus() usage
+54b690a tracing/sched: Track per-cpu rt and non-rt cpu_load.
+b380bbc kthread: Fix the race condition when kthread is parked
+21b7a99 sched/rt: Use root_domain of rt_rq not current processor
+4cbc72a genirq: Introduce irq_do_set_affinity() to reduce duplicated code
+296f8e3 genirq: Always force thread affinity
+9a4b875 sched: Fix migration thread runtime bogosity
+3b9a4f1 futex: Make lookup_pi_state more robust
+3be1e4e futex: Always cleanup owner tid in unlock_pi
+0c8200f futex: Validate atomic acquisition in futex_lock_pi_atomic()
+ac20ac9 Power: Changes the permission to read only for sysfs file /sys/kernel/wakeup_reasons/last_resume_reason
+afeb8a2 rcu: Use smp_hotplug_thread facility for RCUs per-CPU kthread
+ef79581 rcu: Yield simpler
+31ff67b softirq: reduce latencies
+5997317 softirq: Use hotplug thread infrastructure
+381f74c Power: Add guard condition for maximum wakeup reasons
+fac8328 POWER: fix compile warnings in log_wakeup_reason
+94fad60 Power: add an API to log wakeup reasons
+bed72cd stop_machine: Mark per cpu stopper enabled early
+8ff53bc stop_machine: Use smpboot threads
+528f9d5 stop_machine: Store task reference in a separate per cpu variable
+6389630 kthread: Prevent unpark race which puts threads on the wrong cpu
+555f9d3 smpboot: Allow selfparking per cpu threads
+9d5b77e hotplug: Fix UP bug in smpboot hotplug code
+358aba3 smpboot: Provide infrastructure for percpu hotplug threads
+0747a97 kthread: Implement park/unpark facility
+ac9082a kthread_worker: reimplement flush_kthread_work() to allow freeing the work item being executed
+3ab1cb2 kthread_worker: reorganize to prepare for flush_kthread_work() reimplementation
+819a70f smpboot, idle: Fix comment mismatch over idle_threads_init()
+49ceab5 smpboot, idle: Optimize calls to smp_processor_id() in idle_threads_init()
+6589c3c smp, idle: Allocate idle thread for each possible cpu during boot
+db583c9 smp: Provide generic idle thread allocation
+305b776 smp: Add generic smpboot facility
+5c818c3 rtc: alarm: init power_on_alarm_lock mutex in alarmtimer_rtc_timer_init
+7618ea9 rtc: alarm: have dummy set_power_on_alarm function
+c6d15db sched/debug: Make sysrq prints of sched debug data optional
+32a4e72 CPU hotplug, debug: detect imbalance between get_online_cpus() and put_online_cpus()
+7d7f003 sched: Fix clear NOHZ_BALANCE_KICK
+534a824 tracing/sched: add load balancer tracepoint
+30da022 timekeeping: Add missing update call in timekeeping_resume()
+d8cbcd3 smp: Relax irqs_disable() warning in smp_call_function_single()
+7b11c36 workqueue: reimplement WQ_HIGHPRI using a separate worker_pool
+41f4afb workqueue: introduce NR_WORKER_POOLS and for_each_worker_pool()
+854a72d workqueue: separate out worker_pool flags
+87d7aac workqueue: use @pool instead of @gcwq or @cpu where applicable
+0e59af7 workqueue: factor out worker_pool from global_cwq
+a5d86b6 workqueue: don't use WQ_HIGHPRI for unbound workqueues
+0360627 random: make 'add_interrupt_randomness()' do something sane
+05bee43 watchdog: Fix warning caused by use of smp_processor_id()
+20506a5 tracing/sched: Add trace events to track cpu hotplug.
+8b3b3e6 kernel/lib: add additional debug capabilites for data corruption
+7c89909 irq: display the wakeup depth and disable depth of an irq
+14164fb PM / QoS: Fix deadlock during PM QoS vote to default value
+114ff4a Revert "msm: move printk out of spin lock low_water_lock"
+3c61c605 kernel: cgroup: push rcu read locking from css_is_ancestor() to callsite
+899e249 mm: remove swap token code
+bfc65c6 msm: move printk out of spin lock low_water_lock
+a112571 sched: change WARN_ON_ONCE to WARN_ON in try_to_wake_up_local()
+a4e4c6e sched: Convert BUG_ON()s in try_to_wake_up_local() to WARN_ON_ONCE()s
+26cb1f7 sched: fix reference to wrong cfs_rq
+9ef5acb sched: Fix SCHED_HRTICK bug leading to late preemption of tasks
+3a0afc9 hrtimer: Prevent hrtimer_enqueue_reprogram race
+7990a22 sched: remove migration notification from RT class
+be55cbe sched: provide per cpu-cgroup option to notify on migrations
+a95792e cpufreq: Save user policy min/max instead of policy min/max during hotplug
+9023dce cpufreq: fix sleeping in atomic context when realloc freq_table for all_time_in_state
+8c87b65 cpufreq: Persist cpufreq time in state data across hotplug
+acab639 cpufreq: Fix broken uevents for cpufreq governor and cpu devices
+22d4dda drivers: cpufreq: Send a uevent when governor changes
+4bca426 cpufreq: Fix policy getting stuck when user & kernel min/max don't overlap
+b4bde90 cpufreq: Retain only online cpus in managed_policy->cpus
+fb80597 msm: cpufreq: Only apply driver limits for scaling_min/max_freq writes
+f732492 cpufreq: interactive: don't skip waking up speedchange_task if target_freq > policy->cur
+79ef2aa cpufreq: interactive: prevents the frequency to directly raise above the hispeed_freq from a lower frequency.
+0434222 cpufreq: interactive: Do not reschedule timer if policy->max changes
+6cbd918 cpufreq: interactive: Reschedule timer if min_freq is reduced
+8dccfce CHROMIUM: cpufreq: interactive: calculate load before freq change
+d9729ad cpufreq: interactive: Rearm governor timer at max freq
+3f7f92e CHROMIUM: Replace obsolete strict_strtoul calls.
+0df81d6 CHROMIUM: cpufreq: interactive: validate above_hispeed_delay
+1edec2d cpufreq: interactive: Honor boosted state in several timer calculations
+44f9de4 cpufreq: interactive: Consider changed min limit a frequency boost
+a43a956 cpufreq: interactive: Honor changed minimum frequency
+389e326 cpufreq: interactive: Record hispeed_validated_time in timer function
+2d24905 cpufreq: interactive: Exercise hispeed settings at a policy level
+ea82b8c cpufreq: interactive: Add max_freq_hysteresis feature
+4384b1d cpufreq: interactive: Use del_timer/add_timer_on to rearm timers
+8d74d79 cpufreq: interactive: Reset last evaluated jiffy in idle callback
+83d21f5 cpufreq: interactive: Align timer windows for all CPUs
+c5c2636 cpufreq: interactive: Squashed cleanup patches
+36685b9 cpufreq: Move get_cpu_idle_time() to cpufreq.c
+f48db3f cpufreq: interactive: Move definition of cpufreq_gov_interactive downwards
+6815a0f cpufreq: interactive: Round up timer_rate to match jiffy
+28ab707 cpufreq: interactive: turn boost_pulse off on boost off
+a37b877 cpufreq: interactive: restructure CPUFREQ_GOV_LIMITS
+ff96ba6 cpufreq: interactive: fix compiling warnings
+473c339 cpufreq: interactive: Optimize sync_freq implementation
+7bfb8b2 cpufreq: interactive: Remove unnecessary cpu_online() check
+cd94d35 cpufreq: interactive: Don't reset sampling down factor at max freq
+ce6a576 cpufreq: cpu-boost: Readd missing bits
+0738fcb cpufreq: cpu-boost: Re-issue boosts above minimum frequency
+a6eb4b0 cpufreq: Sync on thread migration optimizations
+3700234 cpufreq: interactive: delete timers for GOV_START
+967ba45 cpufreq: interactive: Fix null pointer dereference in interactive governor
+83698b77 cpufreq: interactive: Use default min_sample_time if SDF is zero
+488c4d5 cpufreq: interactive: Modifying sync_freq implementation
+85b6acc cpufreq: interactive: Remove trace event from idle_start handler
+f2ecfa1 cpufreq: interactive: Reset floor_validate_time if busy at max for 100ms
+f74bfab cpufreq: interactive: sync freq feature for interactive governor
+37d5ce1 cpufreq: interactive: Allow 1 ms error in above_hispeed_delay comparisons
+fea2f22 cpufreq: interactive: Add a sampling_down_factor for max frequencies
+31fd7f9 cpufreq: interactive: fix show_target_loads and show_above_hispeed_delay
+274a6ab cpufreq: interactive: Sync with latest from Google
+d3bbd47 cpufreq: interactive: Fix blocked task warnings
+788bfef cpufreq: cpu-boost: Remove unused waitqueue
+ee298a0 cpufreq: cpu-boost: Fix queue_delayed_work_on() race with hotplug
+20b442b cpufreq: cpu-boost: Use hotplug thread infrastructure
+d4660b8 cpufreq: Disable cpu-boost by default
+e3cab76 cpufreq: Add Input Boost feature to the cpu-boost driver
+537ba94 cpufreq: Add a sync limit to cpu-boost
+3b46050 cpufreq: Add cpu-boost driver
+e6d8d3b panic: resume console if panic after console suspend.
+bf735ef msm: subsystem: switch restart_level from SOC to INDEPENDENT.
+74c3fa2 awifi: defconfig: Disable LGE_KCAL
+a8aa56a msm: mdp: Restore PCC config when MDP goes on
+6101c4b mdp4: pcc: fix PCC disablement
+afda422 video: mdp4: Color temperature interface using PCC
+14641b1b net: add length argument to skb_copy_and_csum_datagram_iovec
+f2019ac kernel/hz.bc: ignore.
+76fc2f6 kernel: Replace timeconst.pl with a bc script
+0b810c8 wlan: Address buffer overflow due to invalid length
+0d86c1c awifi: Enable RTC write function
+3e3e2df awifi: defconfig: Enable CFG80211_INTERNAL_REGDB
+
+   * packages/apps/ContactsCommon/
+8ace389 Fix contact JSON record parsing.
+
+   * packages/apps/Dialer/
+4395a7e Remove usage legacy HTTP Client
+386fc09 dialer: fix fc on secundary users
+
+   * packages/apps/Mms/
+5978d51 Remove text watcher that is incorrectly formatting numbers in RTL.
+
+   * packages/apps/Settings/
+ff01cb1 Settings: regulatory: Wrap the layout in a ScrollView
+
+   * packages/apps/Trebuchet/
+1c46bab Live Settings: always rebuild DynamicGrid
+
+   * packages/services/Telecomm/
+15679e2 Telecomm: Fix crash for SIP on dual sims device
+e08bab3 - Fix SIP soft-reboot on call
+
+   * vendor/cm/
+e5b8b5a cm: make cgroups files read-only for all users
+
+   * vendor/lge/
+3db5656 Remove time services files
+
+===================================
+Since Fri Oct 30 20:48:23 UTC 2015
+===================================
+
+
+   * android/
+f4b3d08 intel: Use our own intel hw projects for libdrm, hwc, & libmix
+a1a71ff android-5.1.1_r24 -> android-5.1.1_r26
+
+   * bootable/recovery/
+c9b1143 recovery: add opt-out of exFAT
+29e9b2f Merge tag 'android-5.1.1_r26' into cm-12.1
+
+   * build/
+4a013e5 build: Don't load dt.img task if custom mkbootimg is used
+3e8b427 build: create dt.img task
+a306ef0 ota_from_target_files: Don't validate data signatures with data wipe
+1249533 Merge tag 'android-5.1.1_r26' into HEAD
+
+   * cts/
+04eebc6 rename android_security_cts_AudioflingerBinderTest.cpp to android_security_cts_AudioFlingerBinderTest.cpp
+9446958 Manually fix build errors from an MNC cherry-pick.
+a49f503 add more binder tests for AudioFlinger and AudioPolicyService.
+4783561 CTS: verify ConnectivityManager.requestNetwork throws for restricted networks
+74d90b3 Test if libstagefright dies in onInputBufferFilled on currupted file
+59cddac Add 5-second timeout to testFlacHeapOverflow
+f0ec278 DO NOT MERGE - Add security test for IEffect binder command
+a41f1b6 DO NOT MERGE: Test whether mediaserver leaks info across invalid binder calls
+b0e6092 DO NOT MERGE - Add CTS tests for IAudioflinger binder checks.
+
+   * device/lge/awifi/
+9a4f70e CameraWrapper: Fixes for HDR mode
+9d6cd58 CameraWrapper: Updates
+e8ad0c1 sepolicy: Address vold denial for /sns
+7c139d0 sepolicy: Add camera props
+
+   * external/wpa_supplicant_8/
+9ec7ddc NFC: Fix payload length validation in NDEF record parser
+47b5051 WNM: Ignore Key Data in WNM Sleep Mode Response frame if no PMF in use
+bac9fa8 EAP-pwd peer: Fix last fragment length validation
+c69b9d1 EAP-pwd server: Fix last fragment length validation
+6a51515 EAP-pwd peer: Fix error path for unexpected Confirm message
+
+   * frameworks/av/
+861b59e audiopolicy: Fix A family a2dp mismerge
+ee4b4d3 stagefright: MPEG4Extractor: allow 'hdlr' box before first track
+8295e4e DO NOT MERGE: Protect data source access with mutex during disconnect
+5d567cc Merge tag 'android-5.1.1_r26' into cm-12.1
+
+   * frameworks/base/
+857b8ef Automatic translation import
+d6aedda base: get rid of android time class
+317990f Revert "Only accept user rotations when in USER_ROTATION_FREE mode"
+d19d27b Update boosted audio files 1/2
+bd0e2f2 Merge tag 'android-5.1.1_r26' into cm-12.1
+04d2436 Fix crash if Exif-Tag buffer-length and component-count are both 0
+
+   * frameworks/native/
+1cba324 Merge tag 'android-5.1.1_r26' into cm-12.1
+
+   * frameworks/opt/net/wifi/
+af2b866 wifi: don't disable AP on sub change if it's the same sub
+
+   * frameworks/opt/telephony/
+7df85d5 telephony: use phoneaccounts to determine voiceprompt status
+aea6eb3 [DO NOT MERGE] Harmlessly (?) fixes LOD on Sprint and Verizon (?) via Fallback
+c1b6b90 Fix NOT_RESTRICTED network capability and enforce it.
+35fc15d Merge tag 'android-5.1.1_r26' into cm-12.1
+
+   * hardware/qcom/media-caf/msm8916/
+bb144e5 Build mm-video-v4l2 on msm8909's
+
+   * packages/apps/AudioFX/
+4a77508 Automatic translation import
+
+   * packages/apps/CMFileManager/
+8c39954 Automatic translation import
+
+   * packages/apps/Camera2/
+e6b9797 Automatic translation import
+44d2333 Fix crash if Exif-Tag buffer-length and component-count are both 0
+
+   * packages/apps/Contacts/
+aa29642 Automatic translation import
+
+   * packages/apps/DeskClock/
+60d907d deskclock: support ogg music files
+
+   * packages/apps/Dialer/
+a3845ef Automatic translation import
+
+   * packages/apps/Eleven/
+9d2f804 Automatic translation import
+
+   * packages/apps/Gallery2/
+6912a34 Automatic translation import
+77db8c7 Fix crash if Exif-Tag buffer-length and component-count are both 0
+
+   * packages/apps/LockClock/
+8751c90 Automatic translation import
+d2d601f LockClock : Add api key for open weather
+
+   * packages/apps/Mms/
+fee5d24 Automatic translation import
+7965b67 Fix crash if Exif-Tag buffer-length and component-count are both 0
+
+   * packages/apps/Settings/
+50fed8b Settings: add opt out stats event
+c2ca831 Settings: Add security level default string
+7a985ee Remove CM translations of security_patch
+99c7c51 Automatic translation import
+24a133a wifi: Add a filter
+58c9d69 Add translations for Security Patch Level.
+e6be537 Merge tag 'android-5.1.1_r26' into cm-12.1
+185ef46 Settings: update contributors cloud
+
+   * packages/apps/ThemeChooser/
+cb8b79c Automatic translation import
+e6c8aec themechooser: listen for previews
+
+   * packages/apps/Trebuchet/
+692799c Automatic translation import
+2d723e2 GMS 3.0 : Update optional apps and folders
+8361472 Update default workspace to GMS 3.0 req
+f6a8d4f Fix crash if Exif-Tag buffer-length and component-count are both 0
+88dc0de Trebuchet: Enable HW Layers in app drawer
+
+   * packages/apps/TvSettings/
+11ffa66 Automatic translation import
+
+   * packages/providers/ThemesProvider/
+2f386fc Fix applied previews query when component doesn't exist
+0fe2d61 themeprovider: notify uri on preview deletion
+
+   * packages/services/Telephony/
+c10cca6 Automatic translation import
+1acdc19 TeleService: Ensure the right phone object is used for MSIM
+
+   * packages/wallpapers/PhotoPhase/
+7ee94ae Automatic translation import
+
+   * prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9/
+f22f062 Add NOTICE and MODULE_LICENSE files.
+3122899 Revert "Revert "Update prebuilt gold for --pic-veneer option.""
+4b05a5a Revert "Update prebuilt gold for --pic-veneer option."
+3d2f537 Update prebuilt gold for --pic-veneer option.
+
+   * system/core/
+323bb81 Merge tag 'android-5.1.1_r26' into cm-12.1
+4743d5c healthd: Turn screen off before rebooting
+
+   * system/extras/su/
+ee9de09 Merge "replace insecure uid spoofing code" into cm-12.1
+860479b replace insecure uid spoofing code
+1e7b152 daemon: Validate the socket caller's requested FDs
+4f4cd57 su: Remove dead code
+
+   * system/vold/
+336f513 cryptfs: Unbreak hardware-backed pattern lock + encryption
+314f910 vold: add opt-out for exFAT
+
+   * vendor/cm/
+675f474 cm: add opt-out for exFAT
+d9d3201 Remove instance of server=""
+902c2cc Update boosted audio files 2/2
+7a218f8 Ventelo is now Phonero
+48a042e contributors: add LG G4, remove cody from some devices
+
+   * vendor/cmsdk/
+0c0aef6 CMSettings: add reporting status setting
+a6d50e0 Automatic translation import
+
+===================================
+Since Tue Oct 27 18:42:45 UTC 2015
+===================================
+
+
+   * build/
+efa52fa generate_extra_images: Allow supplying arguments to dtbtool
+67416e9 build: Adjust for device-specific HAL paths
+
+   * device/lge/awifi/
+df9da86 Update and cleanup wifi files
+adc9410 WCNSS: Optimize TDLS
+d06d94d WCNSS: Enable TDLS auto mode
+3727d81 WCNSS: Don't skip DFS channel in P2P search
+c7d21ab Update fingerprint to V50030B
+
+   * device/qcom/common/
+62e2fc0 power: enable perf options for power bias
+
+   * external/stagefright-plugins/
+61bf067 codecs: Disable AC3/EAC3
+
+   * frameworks/av/
+3868162 camera: Allow devices to load custom CameraParameter code
+
+   * frameworks/base/
+adadaa8 SystemUI: HeadsUp: Check if view isn't already in windowManager
+7dd267d Keyguard: Show backdrop when sim pin secure screen shown
+51bdbe7 Only accept user rotations when in USER_ROTATION_FREE mode
+3f095e6 SettingsProvider: load animation defaults into correct table
+312801d Keyguard: fix fingerprint not starting after user switch
+f871234 FingerprintService: fix fingerprints disappearing
+4a5997c Automatic translation import
+
+   * frameworks/opt/telephony/
+f1cd40b Add getPreferredApn() in buildWaitingApns()
+
+   * packages/apps/BluetoothExt/
+ef81181 Automatic translation import
+
+   * packages/apps/CMFileManager/
+ab89abc Automatic translation import
+
+   * packages/apps/Contacts/
+4abb2f0 Contacts : Add ability to customize Contact Editor Views
+dcfa888 Automatic translation import
+
+   * packages/apps/Eleven/
+c544b6a Automatic translation import
+
+   * packages/apps/Gallery2/
+7127cd4 Automatic translation import
+
+   * packages/apps/InCallUI/
+85ab64d Automatic translation import
+
+   * packages/apps/Mms/
+b9e9ff2 Fixed Messaging: Overflow menu options change after screen ON/OFF
+8297e7b Fix subject limit checking.
+
+   * packages/apps/Settings/
+a5c9b8e Automatic translation import
+553b057 Settings : Update performance tile drawable reference
+0f7e5ff HighTouchSensitivity [2/2]: Add Settings preference
+e79c373 settings: ensure we don't call isProtectedApp with an invalid reference
+
+   * packages/apps/ThemeChooser/
+7d117f9 Automatic translation import
+
+   * packages/apps/Trebuchet/
+56396c8 trebuchet: ensure not overlaping shorcuts with dockbar items when searchbar is invisible
+
+   * packages/apps/TvSettings/
+19d218c Automatic translation import
+
+   * packages/services/Telephony/
+70674fd Automatic translation import
+
+   * vendor/cmsdk/
+694c14c Automatic translation import
+826c1aa HighTouchSensitivity [1/2]: Add Settings preference
+
+   * vendor/lge/
+410d949 Update blobs from V500-30B
+
+===================================
+Since Mon Oct 19 19:29:58 UTC 2015
+===================================
+
+
+   * android/
+7043987 Revert "efence: Add electric fence to default manifest."
+
+   * bootable/recovery/
+4224760 Blank screen during shutdown and reboot
+840c175 update-binary: support reboot_now on older recoveries
+
+   * build/
+22a3719 "LMY48Y"
+7fc9ab7 envsetup: Show error when supplied dir isn't present with mmm
+9f5ee48 edify: Fix _WordWrap function calls
+9c32ee8 kernel: Don't update defconfig with KERNEL_ADDITIONAL_CONFIG options
+8237106 kernel: use merge-config.sh for integrating KERNEL_ADDITIONAL_CONFIG
+4754814 mka: allow mka to be run from anywhere in the tree
+
+   * device/lge/awifi/
+1f357fb Add camera wrapper
+e7b6fa3 Don't switch to bfq until after boot
+220f4f7 mpdecision: Disable --no_sleep
+
+   * device/qcom/common/
+6948d77 power: add support for bias modes on 8994
+
+   * frameworks/base/
+2fa41c6 SystemUI: update keyguard state when profiles disable keyguard
+4d44dda perf: Add support for additional power profiles
+3cf6b3c Revert "autobrightness: Fix the brightness dialog is not work when first enable auto-backlight"
+11d47e4 base: don't show reboot options for safe mode
+06c39e2 Wifi tile: don't set items visible from non-ui thread
+4432d5a AssetAtlasService: fix a potential race condition
+3169f4c Revert "[DO NOT MERGE] Bump up the timeout for uncrypt to 900s."
+3ba4c35 Automatic translation import
+1c4ed33 SystemUI: Improve play queue string
+25d8fd3 base: initialized context ContentResolver reference before use it.
+5835cda Lights Modes: Avoid regular values updates
+30e4de9 Support for faster brightness response to light changes.
+
+   * frameworks/native/
+e4759c3 sensorservice: customize sensor fusion mag filter via prop
+
+   * hardware/qcom/audio-caf/msm8916/
+90db087 add line out to device sharing codec backend
+359e995 hal: updates for DEVICE_OUT_LINE
+e845ba1 hal: Add support for AUDIO_DEVICE_OUT_LINE
+
+   * hardware/qcom/display-caf/msm8974/
+d4c3461 hwc: reset overlay and writeback in unblank if writeback is active
+
+   * packages/apps/CMFileManager/
+b2e715e Automatic translation import
+06b63a7 Thumbnail update on copy and overwrite issue of pictures
+
+   * packages/apps/CMUpdater/
+4e5fbed Automatic translation import
+
+   * packages/apps/Calendar/
+de4e6ca Automatic translation import
+
+   * packages/apps/Contacts/
+6b4976d Fix empty field creation for data kinds without type.
+ab1e2ac Automatic translation import
+
+   * packages/apps/DeskClock/
+3cc92a9 Proguard causing RuntimeException
+df1817d Null-check in case an AlarmInstance's Alarm no longer exists.
+5b4d6c3 Automatic translation import
+
+   * packages/apps/Email/
+b9984de email: junk icon
+db1ca54 email: return default folder name for subfolders
+
+   * packages/apps/Gallery2/
+9a39c44 Automatic translation import
+
+   * packages/apps/Mms/
+2db7fb3 Fix formatting
+4598153 Correct AOSP DE translation error
+
+   * packages/apps/Settings/
+5fcea94 WirelessSettings: Remove NFC category if there's no NFC adapter
+d124efa settings: update contributors stats
+c2f6129 settings: update control ring stream string
+49f5298 protected-apps: don't show a progress dialog for short operations
+26fe05e Settings: Fix LCD Density preference crash on secondary user
+47a7bb6 Settings: update layouts
+4275caa Automatic translation import
+4dd3efe Protected Apps: add some side padding in app list view
+
+   * packages/apps/SetupWizard/
+52f6310 Automatic translation import
+
+   * packages/apps/Trebuchet/
+e0fe495 trebuchet: ensure not overlaping shorcuts and drop items when searchbar is invisible
+
+   * packages/apps/TvSettings/
+6bbba7d Automatic translation import
+
+   * packages/apps/UnifiedEmail/
+8ef4be4 unifiedemail: junk icon
+95cc3e9 email: allow move/copy operations to more system folders
+322e058 Automatic translation import
+
+   * packages/inputmethods/LatinIME/
+305b050 Automatic translation import
+
+   * packages/providers/ThemesProvider/
+2fdddef Fix live lock screen previews not showing up
+
+   * packages/services/Mms/
+537889f Automatic translation import
+
+   * packages/services/Telephony/
+0c2f1f4 Automatic translation import
+62d5dea TeleService: Make ongoing mwi notification overlayable
+
+   * packages/wallpapers/Basic/
+a62a6f5 PolarClock: Don't draw on invisible surfaces
+
+   * vendor/cm/
+6807df0 sepolicy: allow various process access /data/bootchart folder
+900d6cc Updated CHANGELOG and (c) date
+
+   * vendor/cmsdk/
+20cecb7 CMSettingsProvider: Add ability to read region locked themes
+8c87673 Automatic translation import
+
+   * vendor/lge/
+1372241 Rename camera hal, needed for camera wrapper
+
