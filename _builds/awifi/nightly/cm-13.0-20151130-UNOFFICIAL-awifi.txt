@@ -1,0 +1,46 @@
+===================================
+Since Sat Nov 28 13:22:34 UTC 2015
+===================================
+
+
+   * bionic/
+ad21814 linker: Reset the active shim libs each time we do a dlopen
+
+   * device/lge/awifi/
+749779d Build the kernel with gcc-4.9
+888025a Don't show battery percentage in off charge
+2838325 Use new url for cm-13.0 ota
+
+   * external/wpa_supplicant_8/
+213afc9 Fix dependencies
+
+   * frameworks/base/
+a9cdd4f libhwui: make surface buffer allocation asynchronous
+3973c59 libhwui: make setSurface asynchronous
+2f123cd core: Don't enable qualcomm location overlay by default
+
+   * frameworks/opt/net/wifi/
+214bf2c wifi: Fix for re-association failure (auto join)
+100946b wifi: Handle the NULL check for the STATUS command
+
+   * packages/apps/Bluetooth/
+cc25472 Bluetooth: Disable clang
+
+   * packages/apps/Settings/
+afc48d7 settings: Remove direct usage of CMHardware
+732cec2 Settings: Allow launching display rotation settings externally
+
+   * packages/services/Telephony/
+c2ba6de Telephony: reload CarrierConfig based on changes to build display version
+
+   * vendor/cm/
+e016467 sepolicy: Allow adb pull of executables without root
+
+   * vendor/cmsdk/
+a3baf9c migration: Clean up abstractions.
+4ae9604 cmsdk: Reimplement helper methods for secondary telephony service.
+c221959 cmsdk: Re-enable multiple profiles functions.
+
+   * vendor/lge/
+7ac4ede Update Adreno from Qualcomm 10 Nov 2015 release for Marshmallow
+
